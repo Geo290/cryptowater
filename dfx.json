@@ -1,0 +1,44 @@
+{
+  "canisters": {
+    "cryptowater_backend": {
+      "main": "src/cryptowater_backend/main.mo",
+      "type": "motoko"
+    },
+    "cryptowater_frontend": {
+      "dependencies": [
+        "cryptowater_backend"
+      ],
+      "source": [
+        "src/cryptowater_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "cryptowater_frontend"
+    },
+    "internet_identity": {
+      "candid": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity.did",
+      "frontend": {},
+      "remote": {
+        "id": {
+          "ic": "rdmx6-jaaaa-aaaaa-aaadq-cai"
+        }
+      },
+      "type": "custom",
+      "wasm": "https://github.com/dfinity/internet-identity/releases/latest/download/internet_identity_dev.wasm.gz"
+    }
+  },
+  "defaults": {
+    "bitcoin": {
+      "enabled": true,
+      "log_level": "info",
+      "nodes": [
+        "127.0.0.1:18444"
+      ]
+    },
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
