@@ -1,4 +1,8 @@
-import Time "mo:base/Time"
+import Time "mo:base/Time";
+import Principal "mo:base/Principal";
+import Text "mo:base/Text";
+
+
 actor Pagos{
 // Declarar una variable de fecha
 var fecha: Time.Time = Time.now();
