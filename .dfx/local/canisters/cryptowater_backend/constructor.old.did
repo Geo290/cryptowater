@@ -1,3 +1,7 @@
+type Time = int;
 service : {
-  greet: (text) -> (text) query;
+  getEstado: () -> (bool);
+  getFecha: () -> (Time);
+  getMetodo: () -> (text);
+  getMonto: () -> (nat);
 }

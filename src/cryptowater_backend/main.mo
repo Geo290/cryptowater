@@ -22,4 +22,12 @@ var estado: Bool = false;
         return estado;
   };
 
+
+      public query (message) func whoAmi(): async Text{
+      if(Principal.isAnonymous(message.caller)){
+        return "No estas logueado";
+      };
+      return "Hola, bienvenido";
+
+    };
 };
